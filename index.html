@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ogulcan Mehmet Oguz - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Ogulcan Mehmet Oguz
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          ogulcan.oguz@outlook.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +5535535353
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://cdn.pixabay.com/animation/2024/06/04/13/22/13-22-13-877_512.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Ogulcan Mehmet Oguz! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            I am a person who's trying to learn software development with Coursera course name is Full Stack Software Development from IBM.
+            I am also trying to graduate from Istanbul University - Management System Information
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h3>HTML</h3>
+          <p>3 months experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h3>JavaScript</h3>
+          <p>3 months experience</p>
+        </div>  
+
+        <div class="skill">
+            <img src="html_finalprojimages/CSS3.png"/>
+            <h3>CSS3</h3>
+            <p>3 months experience</p>
+        </div>
+        
+        <div class="skill">
+            <img src="html_finalprojimages/react.png"/>
+            <h3>React</h3>
+            <p>1 months experience</p>
+        </div>
+
+        <div class="skill">
+            <img src="html_finalprojimages/python.png"/>
+            <h3>Python</h3>
+            <p>1 months experience</p>
+        </div>
+
+        <!-- Add more skills here -->
+
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>Piano 101</h3>
+            <ul>
+              <li>I have developed a website where even those who do not know how to play the piano can play the piano on the website and learn how to play the piano on their own.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Sales and Inventory Tracking System</h3>
+            <ul>
+              <li>Adding the products to be sold by a company to a database through a website, tracking stock status and sales through that database.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Create your own CV</h3>
+            <ul>
+              <li>A website for easy CV preparation and the possibility to download in PDF format</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Ogulcan is a very quick learner and quickly grasps key concepts of Web development. 
+          He is always pushing his limits and always trying to be perfect.
+          His dialog with the people around him is very good, if he was part of a team, he would influence that team with his positivity
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          The language he uses in communication makes him a team player.
+          If he disagrees with your opinion, he conveys it in such a way that you never sense any negativity. 
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          During the course, he did not skip any lessons and did the tasks assigned to him to the letter.
+          It was a very pleasant experience to put him in the sea and watch him learn to swim.
+          I am sure that when Ogulcan reaches his potential, he will help the people around him reach theirs.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <img src="html_finalprojimages/home.png" alt="Go to top" />
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+        <img src="html_finalprojimages/checkmark--outline.svg" alt="Checkmark Icon" />
+        <h3>Thanks for leaving a recommendation!</h3>
+        <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
